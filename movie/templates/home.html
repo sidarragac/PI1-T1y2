@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <style>
+        .title{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the home page, {{ name }}</h1>
+    <div class="title">
+        <h1>Welcome to the home page, </h1>
+        <h1 style="color: blue;"> {{ name }}</h1>
+    </div>
     <h1>This is the full home page</h1>
 </body>
 </html>
