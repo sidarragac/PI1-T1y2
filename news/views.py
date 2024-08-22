@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 def news(request):
-    pass
+    newss = News.objects.all().order_by("-date")
+    return render(request, 'news.html', {'newss': newss})
