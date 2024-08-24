@@ -103,3 +103,7 @@ def statisticsView(request):
     moviesPerYear = __moviesPerYear()
     moviesPerGenre = __moviesPerGenre()
     return render(request, 'statistics.html', {'moviesPerYear': moviesPerYear, 'moviesPerGenre': moviesPerGenre})
+
+def signup(request):
+    email = request.GET.get('email')
+    return render(request, 'signup.html', {'email': email})
