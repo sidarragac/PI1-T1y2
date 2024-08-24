@@ -28,7 +28,7 @@ def statisticsView(request):
     
     for movie in allMovies:
         year = movie.year if movie.year else 'None'
-        if year in movie:
+        if year in movieCountsByYear:
             movieCountsByYear[year]+=1
         else:
             movieCountsByYear[year] = 1 
